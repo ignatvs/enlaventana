@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+  <head>
+    <title>
+      Internet Radio Player
+    </title>
+    <style>
+      .centro {
+          width: 25%;
+          margin-left: auto;
+          margin-right: auto;
+          
+          background-color: #222;
+      }
+      ul {
+        background: #222;
+        padding-left: 20px;
+        font-size: small;
+      }
+      ul li {
+        background: #222;
+        color: #0a0;
+        padding: 5px;
+      }
+      .active:active {
+      color: #0b0;
+      }
+      li:hover {
+        color: #0f0;
+      }
+      a:visited {
+        color: #0a0;
+      }
+      a:hover {
+        color: #0f0;
+      }
+      li:nth-child(even) {
+        background-color: #333;
+      }
+  </style>
+  </head>
+  <body class="centro">
+    <script>
+      function display(e) {
+        var x = e.getAttribute('value');
+        document.getElementById("audio").setAttribute("src", x);
+        copystr = e.getAttribute('content');
+        document.getElementById("nota").innerHTML = copystr;
+      };
+
+    </script>
+    <br><br><br><br>
+    <table style="width: 260px; border-radius: 20px; background-color: rgb(181, 108, 18);">
+      <tr>
+        <th>   </th>
+        <th>
+          <br>
+          <audio id="audio" src="" controls autoplay>
+          Your browser does not support the audio format.
+          </audio>
+        </th>
+        <th>   </th>
+      </tr>
+      <tr>
+        <th>  </th>
+        <th><p>En sintonía con:<br><q id="nota"></q></p></th>
+        <th>  </th>
+      </tr>
+      <tr>
+        <th style="width:25%"> </th>
+        <th style="width:50%">      
+          <ul style="list-style: none; border-radius: 10px;">
+            <li>Estaciones
+              <ul id="list">
+                <li><a href="#" value="https://stream.zeno.fm/2kh73bwnktzuv" onclick="display(this)" content ="Danzoneras Inmortales AM">Danzoneras Inmortales AM</a></li>
+                <li><a href="#" value="https://stream.zeno.fm/h2n3qh8q8k8uv" onclick="display(this)" content ="Trio Romántica México AM">Trio Romántica México AM</a></li>
+                <li><a href="#" value="https://panel.retrolandigital.com/radio/8110/listen" onclick="display(this)" content ="Café Romantico México AM">Café Romantico AM</a></li>
+                <li><a href="#" value="http://stream.zeno.fm/y3pshc7ktg8uv" onclick="display(this)" content ="Época Dorada México AM">Época Dorada México AM</a></li>
+                <li><a href="#" value="http://69.30.218.190:29980/stream/1/" onclick="display(this)" content ="Romántica HD">Romántica HD</a></li>
+                <li><a href="#" value="http://italianradio.streamingmedia.it:8005/play" onclick="display(this)" content ="Italian Radio">Italian Radio</a></li>
+                <li><a href="#" value="http://64.37.50.226:8054/stream/1/" onclick="display(this)" content ="Salsa Dura Colombia">Salsa Dura Colombia</a></li>
+                <li><a href="#" value="http://54.39.247.236:3720/stream/1/" onclick="display(this)" content ="Bossanova Río de Janeiro">Bossanova Río de Janeiro</a></li>
+              </ul>
+            </li>
+          </ul>
+        </th>
+        <th style="width:25%"> </th>
+      </tr>
+    </table>
+    
+    
+    <p>
+    </p>
+  </body>
+</html>
